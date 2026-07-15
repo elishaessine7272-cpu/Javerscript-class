@@ -140,11 +140,32 @@ console.log(typeof hisAge);
 
   //declear arrays student 
 
-  let studentName= ["Davis", "Favour", "Hope", "Maria", "Brizo", "Ambersedor","Victor","Xlover","Edidiong"];
+  let studentName= [
+    "Davis", 
+    "Favour", 
+    "Hope", 
+    "Maria", 
+     "Brizo", 
+     "Ambersedor",
+     "Victor",
+     "Xlover",
+     "Edidiong"];
   console.log(studentName[4]);
 
 
+ //=====Object======
+ // Object are used to store collection of data in key-vaule pairs{}
 
+ let person ={
+    name: "Xlover",
+    age: 800,
+    isMarried: false,
+    height: 6.2,
+    eyecolor: "brown"
+    hobbies: ["singing","praying","cooking"]
+ };
+ console.log(person);
+ console.log(person.hobbies)
 
 
 
