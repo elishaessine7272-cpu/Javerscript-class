@@ -161,11 +161,11 @@ console.log(typeof hisAge);
     age: 800,
     isMarried: false,
     height: 6.2,
-    eyecolor: "brown"
+    eyecolor: "brown",
     hobbies: ["singing","praying","cooking"]
  };
- console.log(person);
- console.log(person.hobbies)
+//  console.log(person);
+ console.log(person.hobbies);
 
 
 
