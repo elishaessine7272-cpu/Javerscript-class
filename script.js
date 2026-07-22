@@ -168,5 +168,175 @@ console.log(typeof hisAge);
  console.log(person.hobbies);
 
 
+let favFood =[
+    "afah soup",
+    "bitterleaf soup",
+    "garri",
+    "rice",
+    "yam",
+    "beans"
+];
+console.log(favFood);
+
+let myCar ={
+    name: "Toyota",
+    model: "Corolla",
+    year: 2020,
+};
+console.log(myCar);
+
+let myGirls ={
+    name: "Mary",
+    age: 25,
+    isSingle: true,
+    shapes: ["think","chubby","chocolate"]
+};
+console.log(myGirls);
+
+let myName=[
+    "John",
+    "Jane",
+    "Bob",
+    "Love Jnr",
+];
+console.log(myName [3]);
+
+
+
+
+
+
+//Multiplication (*)
+let multNum =4 * 5;
+console.log(multNum );
+console.log(4 * 5); 
+
+const m =13;
+const p =3;
+const mult_num =m * p;
+console.log(mult_num);
+
+//Mudulus operator divides number and return the remainder (%)
+
+let div = 44 / 2;
+console.log(div);
+
+let mod = 44 % 2;
+console.log(mod);
+
+// // increment ++ 
+// let incNum = 20;
+// console.log(incNum);
+// incNum++
+// console.log(incNum);
+
+
+// USing a function
+let inc_num = 20;
+function increment() {
+    console.log(inc_num);
+    inc_num++;
+}
+increment();
+increment();
+increment();
+increment();
+increment();
+
+//decrement --
+let decNum = 20;
+decNum--;
+decNum--;
+decNum--;
+decNum--;
+decNum--;
+console.log(decNum);
+
+
+// ===== Assignment Operators =====
+// Assignment operators are symbols that assign vaules to variable 
+// =. +=, -=, /=, and %=
+
+
+let a = 5
+a += 3  // this means a = a + 3
+console.log(a);
+
+let str = "Hello";
+str += " World";
+console.log( str);
+
+// Subtraction
+ let z =10
+ z -= 5;
+ console.log(z);
+
+ // multiplication
+   let w = 7;
+   w *= 14;
+   console.log(w);
+
+   // division
+   let d = 20;
+   d /= 5;
+   console.log(d)
+
+   // modulus
+   let modu = 17
+   modu %= 4;
+   console.log(modu);
+
+     // === COMPARISON OPERATOR ===
+     // There are opeterors used to combine multiple boolean expressions 
+     
+
+      //Loose equal to (==)
+     console.log( 5 == 5);
+
+     let ageNumber = 18;
+     let ageString = "18";
+console.log( ageNumber == ageString)
+
+// 2. Strict equal to (===)
+let score = 100;
+let scoreText = "100";
+console.log( score === scoreText);
+
+// != checks if the vaule are not the same (ignores date type)
+ console.log( 5 != 2);
+
+ let price = 500
+ let priceText = "500";
+ console.log( price !== priceText );
+
+ let level = 3
+ console.log (level !== 3);
+
+ // < less than 
+ let age1 = 15;
+ let requiredAge = 18;
+ console.log(age1 < requiredAge);
+
+ // 6 greater than >
+ let balnce = 5000;
+ let priceToPay = 3000;
+ console.log( balance > priceToPay);
+
+ // 7. <= less than or equal to
+     let attempts = 3;
+     let maxAttempts = 3; 
+     console.log(attempts <= maxAttempts);
+
+     //====Logical Operators =====
+     // logical operators are used to combine multiple boolean expressions. They are used in decision making. 
+      // 1. && (logocal AND) - returns true if both operands are true
+      // 2. || (logical OR) - reture  true if at least one of the operands is true.
+      // 3.! ( logical NOT) - nagates the boolean vaule of an operand
+
+      // 1. && Logical and
+      let ageP =20;
+      let hasID = true;
+      console.log(ageP >= 18 && hasID ===true);
+         
 
 
