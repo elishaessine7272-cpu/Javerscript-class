@@ -320,7 +320,7 @@ console.log( score === scoreText);
  // 6 greater than >
  let balnce = 5000;
  let priceToPay = 3000;
- console.log( balance > priceToPay);
+//  console.log( balance > priceToPay);
 
  // 7. <= less than or equal to
      let attempts = 3;
@@ -337,6 +337,29 @@ console.log( score === scoreText);
       let ageP =20;
       let hasID = true;
       console.log(ageP >= 18 && hasID ===true);
+
+      // .
+      let isLoggedIn = true;
+      let hasPaid = true;
+      if ( isLoggedIn && hasPaid){
+        console.log("You can view premium content");
+      } else {
+        console.log("Please log in and make payment");
+      }
+
+      // logical or ||
+      let isAdmin = false;
+      let isModerator = false;
+      console.log( isAdmin || isModerator); 
          
+      //b. 
+      let hasCash = true
+      let hasCard = false
+      if (hasCash || hasCard) {
+        console.log('payment success');
+      } else {
+        console.log("No payment method available")
+      }
+
 
 
