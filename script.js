@@ -348,18 +348,165 @@ console.log( score === scoreText);
       }
 
       // logical or ||
-      let isAdmin = false;
-      let isModerator = false;
-      console.log( isAdmin || isModerator); 
+    //   let isAdmin = false;
+    //   let isModerator = false;
+    //   console.log( isAdmin || isModerator); 
          
-      //b. 
-      let hasCash = true
-      let hasCard = false
-      if (hasCash || hasCard) {
-        console.log('payment success');
-      } else {
-        console.log("No payment method available")
+    //   //b. 
+    //   let hasCash = true
+    //   let hasCard = false
+    //   if (hasCash || hasCard) {
+    //     console.log('payment success');
+    //   } else {
+    //     console.log("No payment method available")
+    //   }
+
+    //   // logical not ! 
+
+    //   let isOnline = false;
+    //   console.log(!isOnline);
+
+    //   let hasAccess = true;
+    //   console.log(!hasAccess);
+
+    //   let isBanned = true;
+    //   if(!isBanned) {
+    //     console.log("Welcome to the platform");
+    //   } else{
+    //     console.log("Your account is banned!");
+    //   }
+
+      let loggedIn = true;
+      let isAdmin = false;
+      let isBanned = false;
+      if ( loggedIn && !isBanned && isAdmin){
+        console.log("Welcome Admin");
+      }else {
+        console.log("Access Restricted");
       }
 
 
+    // ==== String Operators ====
+    // String concatenation is the process of combining two or more strings together using the + operator 
 
+    let name = "Edidiong"
+    let ourAge = 100
+    const bestCourse = "JavaScript"
+    let greeting = " Hi, my name is " + name + ", " + ", " + "I am " + ourAge + "years old and my best course" + bestCourse
+
+    console.log(greeting)
+
+    // if and  else if statement. 
+    // let textScore = 80;
+    // if(textScore >=70){
+    //   console.log(" Grade: A - Execllent work!");
+    // } else if ( testScore >= 50){
+    //   console.log("Grade B: -Good Job");
+    // } else if ( testScore >= 40) {
+    //   console.log(" Grade: C - You passed");
+    // } else {
+    //   console.log("Grade: F - You failed Worefully");
+    // }
+
+    // ====Swtich Statement =====
+    // The switch statement is used to perform different actions based on the different conditions. It is an alternative to using multiple if...else statements when you have conditions to check
+
+
+
+
+
+    let role = "admin"
+    switch(role){
+      case "admin":
+        console.log("You have full access");
+        break;
+        case "student":
+        console.log("welcome student");
+        break;
+        case "tutor":
+          console.log("welcome tutor");
+          break;
+          case "vistor":
+            console.log("you can only read contents");
+            break;
+            defult: 
+            console.log("Unknow role");
+    }
+
+    //======Ternary Operator=====
+    // A shorter version of if... else
+
+      let herAge0 = 17;
+      let message = herAge0 >= 18 ? "adult" : "minor";
+      console.log(message);
+
+
+      let isLoggedInp = false;
+      let logInStatus = isLoggedInp ? "welcome" : "Please log in";
+      console.log(logInStatus);
+
+      // ====FUNTIONS====
+      // A Function is a reusable block of code that perform a specific task. it is a fundermental building block in programing that allows us to break down complex problem into smaller, more manageabled pieces. Functions can take inputs (paremeters) and reture outputs (results)
+
+      //types
+      // - normal funtion - function name(){}
+      // - arrow function - const name = () => {}
+
+        function greet(){
+          console.log("Hello, Brilliant");
+        }
+        greet();
+        
+
+        sayHello()
+        function sayHello(){
+          console.log("Hello, Welcome to Javascript Class");
+        }
+
+        //  Funtionn Expression
+        // Anytime we get a veriable and set it equal to something, whether it's a function or string or something else, that is known as expression
+        const speak= function(){
+          console.log("Good day!")
+        }
+
+        //== Paremeters and Arguments===
+        //Paremeters = Placeholders
+        // Arguments = Actual Value
+
+        function add(a,b){
+          return a + b
+        }
+        console.log(add(10,10))
+        console.log(add(1,10))
+        console.log(add(10,7))
+        console.log(add(1,11))
+
+        // Arrow functions
+        const sayHi = () => console.log ("Hi");
+        sayHi("sayHi")
+
+        // // //. Arrow funtions with parameter
+        //  const greet = (names) => console.log("Hello" + names);
+        //  greet ("Wizkid")
+
+        //   //3
+        //   const addNum = ( x,y ) => x + y
+        //   console.log(addNum (5, 6));
+
+        //   //4.
+        //   const getGrade = (score) => {
+        //     if (score >= 70) return "AA";
+        //     else if (score >= 50) return "B";
+        //     else return "F";
+        //   };
+        //   console.log(getGrade(90))
+
+          //===== EVENTS =====
+
+          // Events are actions or occurences that happen in the browser, often triggerdby user interactions( like clicks, keypresses, or from submission)
+          // Syntax
+          //element event=' some JavaScipr
+        
+          // common Timing Events:
+          // setTimeout( function, milliseconds) - executes a function once after a specified number of milliseconds
+          // setInterval( function, milliseconds) - Repeatedly execute a function 

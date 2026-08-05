@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>Events</title>
+</head>
+<body>
+    <!-- <h1 class="text-center fw-bold ">HTML EVENTS</h1>
+    <!-- <! Explam 1 ---
+    <button onclick="document.getElementById ('demo').innerHTML=Date ()">
+        The time is</button>
+        <p id="demo"></p> -->
+
+        <!--example 2-->
+
+        <!-- <button onclick="this.innerHTML= Date()"> The time is</button> -->
+
+        <!--Example 3-->
+<!--         
+        <p> Click the button to display the date</p>
+        <button onclick="displayDate()">The Time Is?</button>
+        <p id="demo1"></p> -->
+
+<!-- <div class="div align-content-end">
+        <p class="text-success fs-5 fw-bold m-4">click the button to change mode</p>
+        <button class="btn btn-info justify-content-end" onclick="darkMode()">Dark Mode</button> </div> <br>
+
+       <div class="div d-flex justify-content-center align-items-center flex-column">
+
+        <p  class="text-success fw-bold p-4" id="font">JavaScript makes websites interactive.</p>
+
+<button class="btn btn-primary m-5 p-2" onclick="increaseFont()">Increase Font</button>
+
+
+        <button class="btn btn-danger p-2" onclick="countClicks()">add up</button>
+
+        <p id="count">0</p>
+
+        <button class="btn btn-success p-2" onclick="countClicks1()">reduce</button>
+
+        <p id="count1">0</p>
+
+        <div class="show">
+            <img id="bulb" src="images/IMG_0174.JPG" width="150">
+
+<br><br> -->
+
+<!-- <button onclick="turnOn()">Turn On</button>
+<button onclick="turnOff()">Turn Off</button>
+        </div>
+        
+    </div>  --> -->
+
+
+    //Timing EvENT=====
+
+    <h2>The setInterval() method</h2>
+    <!-- <p id="clock"></p>
+
+
+        
+
+     <script>
+
+     setInterval(showTime, 1000);
+     function showTime() {
+        const d = new date();
+        document.getElementById("clock").innerHTML =
+        d.getHours() + ":" + d.getMinute() + ":" + d,getSeconds();
+     } 
+
+
+       function displayDate(){
+        document.getElementById("demo1").innerHTML = Date();
+       } 
+
+       function darkMode() {
+    document.body.classList.toggle("bg-dark");
+    document.body.classList.toggle("text-white");}
+
+    let clicks = 0;
+
+function countClicks() {
+    clicks++;
+    document.getElementById("count").innerHTML = clicks;}
+
+    let clicks1 = 1;
+    function countClicks1() {
+        clicks1--;
+        document.getElementById("count1").innerHTML = clicks1;
+    }
+
+    function increaseFont() {
+    document.getElementById("font").style.fontSize = "40px";}
+
+    function turnOn() {
+    document.getElementById("bulb").src = "images/IMG_0175.JPG";
+}
+
+function turnOff() {
+    document.getElementById("bulb").src = "images/IMG_0174.JPG";
+}
+
+    </script>
+</body>
+</html>

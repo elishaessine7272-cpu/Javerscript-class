@@ -7,14 +7,184 @@
 </head>
 <body>
     
-    <button id="xlover">hello world</button>
+    
+
+<!-- <h2>the serInterval() method</h2>
+<p id="clock"></p>
 
 
+<h2>setTimeout() method</h2>
+<button id="btn">Start</button>
+<p id="demo7">Wait...</p>
 
     <script>
-        alert("mita shool is the best school in uyo according to the assignment")
+     setInterval(showTime, 1000);
+     function showTime() {
+        const d = new date();
+        document.getElementById("clock").innerHTML =
+        d.getHours() + ":" + d.getMinute() + ":" + d,getSeconds();
+     } 
 
-    </script>
+    const btn = document.getElementById("btn");
+    btn.addEventListener("click", function()
+     {setTimeout (showMsg,3000);
+
+    });
+    function showMsg() {
+        document.getElementById("demo7").innerHTML="I waitedd 3 seconds";
+    }
+
+    </script> -->
+
+    <!--setInterval and ClearInteval-->
+
+<!-- <h2> The setInterval() and clearInterval() method</h2>
+<button id="start">Start</button>
+<button id="stop">Stop</button>
+<p id="counter">0</p> -->
+<!-- DOM Selectors-->
+ 
+ <!-- /* .box{
+    width: 100px;
+    height: 100px;
+    background-color: lightblue;
+    margin: 10px;
+    display: inline-block;
+    text-align: center;
+    line-height: ; -->
+ <!-- }
+ </style>
+ <h2>Element By Class Name</h2>
+<div class="box">Box 1</div>
+<div class="box">Box 2</div>
+<div class="box">Box 3</div>
+
+<button id="colorbtn">Change All Boxes</button>
+<script> -->
+     <!-- document
+    .getElementById("colorbtn").addEventListener("click", function() {
+        const boxes = document.getElementsByClassName("box");
+        for (let i = 0; i < boxes.length; i++) {
+            boxes[i].style.backgroundColor = "lightcoral";
+            boxes[i].style.color = "white";
+
+        }
+    }); -->
+
+    <!-- <style>
+    .highlight {
+        background-color: lightgreen;
+        font-weight: bold;
+    }
+    </style>
+<h2>Get Element By Tag Name</h2>
+<p>paragraph 1</p>
+<p>paragraph 2</p>  
+<p>paragraph 3</p>
+
+<button id="styleBtn" > Change All Paragraphs</button>
+<script>
+    document
+    .getElementById("styleBtn")
+        .addEventListener("click", function() {
+        const paragraphs = document.getElementsByTagName("p");  
+
+        for (let i = 0; i < paragraphs.length; i++) {
+            paragraphs[i].style.backgroundColor = "lightcoral";
+           para[i].classList.add("highlight");
+
+        }
+        paragraphs[0].classList.add("red");
+    });
+     -->
+    <!-- <style>
+        #card{
+            padding: 10px;
+            margin: 1px;
+            border: 1px solid gray;
+        }
+        .active{
+            background-color: lightblue;
+            font-weight: bold;
+        }
+    </style>
+    <h2>Query Selector</h2>
+    <h3>Products</h3>
+
+    <div id="card">Rice</div>
+    <div id="card">Beans</div>
+    <div id="card">plam oil</div>
+    <div id="card">Yam</div>
+
+    <button id="highlightBtn">Highlight</button>
+
+    <script>
+     const button = document.querySelector("#highBtn");
+     const card = document.querySelector("#card");
+     button.addEventlistener("click", function () {
+        card.style.backgroundColor = "yellow";
+        card.style.fontWeight = "bold";
+        card.style.color = "red";
+
+     });
+    </script> -->
+    <style>
+        .card{
+            padding: 10px;
+            margin: 5px;
+            border: 1px solid brown;
+        }
+        .active{
+            background-color: lightblue;
+            font-weight: bold;
+        }
+    </style>
+    <h2>Query selector All</h2>
+
+    <div class="card">JavaScript</div>
+    <div class="card">React</div>
+    <div class="card">Laravel</div>
+    <div class="card">Python</div>
+    <button id="activateBtn">Active Courses</button>
+
+    <script>
+        const cards = document.querySelectorAll(".card");
+        const button = document.querySelector("#activateBtn");
+
+        button.addEventListener( "click", function () {
+            for (let card of cards) {
+                card.classList.add("active");
+            }
+        });
+            </script>
+            
+
+
+
+
+<!-- // //     // let myInterval;
+// //     // let count =0;
+    
+// //     // const btnStart = document.getElementById("start");
+// //     // const btnStop = document.getElementById("stop");
+    
+// //     // // add event listener to start button
+// //     // btnStart.addEventListener("click", function() {
+// //     //     myInterval = setInterval (counter, 1000);
+// //     // });
+// //     // // add event listener to stop btn
+// //     // btnStop.addEventListener("click", function () {
+// //     //     clearInterval(myInterval);
+// //     // });
+    
+// //     // //declaring the counter function
+// //     // function counter() {
+// //     //     count++;
+// //     //     document.getElementById("counter").innerHTML = count;
+// //     // }
+// //     function -->
+
+
     <script src="script.js"></script>
 </body>
 </html>
