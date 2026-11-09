@@ -1,512 +1,644 @@
-//Javascript is aa high-level, bo
-//alert("hello word")
+// //Javascript is aa high-level, bo
+// //alert("hello word")
 
-//INTRODUCTION TO JAVASCRIPT
-//=====JS SYNTAX VARIABLES=====
+// //INTRODUCTION TO JAVASCRIPT
+// //=====JS SYNTAX VARIABLES=====
 
-//Syntax is a rules that fefines how you write any programming langauage. 
-//syntax is the set of rules that defines the combination of symbols that are condisdered to be correctly struction program in that language
+// //Syntax is a rules that fefines how you write any programming langauage. 
+// //syntax is the set of rules that defines the combination of symbols that are condisdered to be correctly struction program in that language
 
-// statement - na single instruction in a program
-// comment- a note in the code that is ignored by the interpreter, used to explain the code 
+// // statement - na single instruction in a program
+// // comment- a note in the code that is ignored by the interpreter, used to explain the code 
 
-// A veriable is a  container used to store data value in Js
-
-
+// // A veriable is a  container used to store data value in Js
 
 
-// A value is a piece of data. It is the most fundemental unite of information that we have in programing.  Call in the smallest unit of information e.g 23, 7, "food"
-
-var age= 70;
-var age=50; 
-var frust= "mango"
-console.log(frust);
-let firstName = "John"
-let xLover = document.getElementById("xlover");
 
 
-//Variables Naming rules/ convention
-//1. Varibale name should be descriptive e.g let color = "mango" le color= "bule",
+// // A value is a piece of data. It is the most fundemental unite of information that we have in programing.  Call in the smallest unit of information e.g 23, 7, "food"
 
-//2. varible names must strat with (a-z,  A-Z) e.g if the variable contain just a name use lower case letter let age =80;
-
-// if the contains two (names)use: 
-//a.camel case e.g let firstName = "xLover"
-//b. pascal case e.g let FirstName = "xLover"
-//c. snake case e.g let first_name = "John"
-// use paschal case e.g let class = ""
+// var age= 70;
+// var age=50; 
+// var frust= "mango"
+// console.log(frust);
+// let firstName = "John"
+// let xLover = document.getElementById("xlover");
 
 
-//  WAYS OF DECLEARING VARIABLES
+// //Variables Naming rules/ convention
+// //1. Varibale name should be descriptive e.g let color = "mango" le color= "bule",
 
- //1. let - blocked-scoped {}
- //2. const - bloked-scoped
-//3. var-global-scoped 
+// //2. varible names must strat with (a-z,  A-Z) e.g if the variable contain just a name use lower case letter let age =80;
 
-function testLetConst() {
-    if(true){
-        let y=20;
-        const z=40;
-        console.log(y,z);
-    }
-}
-
-testLetConst();
+// // if the contains two (names)use: 
+// //a.camel case e.g let firstName = "xLover"
+// //b. pascal case e.g let FirstName = "xLover"
+// //c. snake case e.g let first_name = "John"
+// // use paschal case e.g let class = ""
 
 
-//Dynamic Typing
+// //  WAYS OF DECLEARING VARIABLES
 
-let myAge =100;
-myAge=500;
-console.log(myAge);
+//  //1. let - blocked-scoped {}
+//  //2. const - bloked-scoped
+// //3. var-global-scoped 
 
-let bestFood ="garri";
-bestFood ="rice";
-console.log(bestFood);
+// function testLetConst() {
+//     if(true){
+//         let y=20;
+//         const z=40;
+//         console.log(y,z);
+//     }
+// }
 
-let mySchool ="mitaTch"
-mySchool = "uyo";
-console.log(mySchool);
-
-let myHome="akaRoad";
-myHome="abak";
-console.log(myHome);
-
-let myGirl="jesus"
-myGirl="mary";
-console.log(myGirl);
+// testLetConst();
 
 
-//===== DATA TYPES IN JAVASCRIPT=====
- // What is a data type? 
+// //Dynamic Typing
 
- // Data type is an attribute of data which tell the compiler or interperter how the programmer intends to use the data
- // There are 7 primitive Data types in JS: 
- // 1. Strings
- // 2. number
- // 3. boolean
- // 4. null
- // 5. underfined
- // 6. BigInt
- // 7. Symbol +, -. <>
+// let myAge =100;
+// myAge=500;
+// console.log(myAge);
+
+// let bestFood ="garri";
+// bestFood ="rice";
+// console.log(bestFood);
+
+// let mySchool ="mitaTch"
+// mySchool = "uyo";
+// console.log(mySchool);
+
+// let myHome="akaRoad";
+// myHome="abak";
+// console.log(myHome);
+
+// let myGirl="jesus"
+// myGirl="mary";
+// console.log(myGirl);
+
+
+// //===== DATA TYPES IN JAVASCRIPT=====
+//  // What is a data type? 
+
+//  // Data type is an attribute of data which tell the compiler or interperter how the programmer intends to use the data
+//  // There are 7 primitive Data types in JS: 
+//  // 1. Strings
+//  // 2. number
+//  // 3. boolean
+//  // 4. null
+//  // 5. underfined
+//  // 6. BigInt
+//  // 7. Symbol +, -. <>
  
 
-              //======Strings=======
-// Strings are a froup of characters - alphabets; a-z
-// They can be indentified by the use of ' ' or ""
+//               //======Strings=======
+// // Strings are a froup of characters - alphabets; a-z
+// // They can be indentified by the use of ' ' or ""
  
-let city = "Uyo";
- console.log(city);
- console.log(typeof city)
+// let city = "Uyo";
+//  console.log(city);
+//  console.log(typeof city)
 
- let herAge = 10;
- console.log(herAge);
- console.log(typeof herAge);
+//  let herAge = 10;
+//  console.log(herAge);
+//  console.log(typeof herAge);
 
-            //======numbers========
-// numbers are digits, 0-9. In JS, numbers can either be integer(ints or int)/ floats 
+//             //======numbers========
+// // numbers are digits, 0-9. In JS, numbers can either be integer(ints or int)/ floats 
 
 
-let float = 2.1; 
+// let float = 2.1; 
 
-let x =45;
-let b =7;
-let addNum = x + b;
-console.log(addNum)
+// let x =45;
+// let b =7;
+// let addNum = x + b;
+// console.log(addNum)
   
-             //======Boolean=====
-// Boolean is a data type that returns true or false
+//              //======Boolean=====
+// // Boolean is a data type that returns true or false
 
-console.log(45==45); //lose 
-console.log("70"=== 70); // strict
+// console.log(45==45); //lose 
+// console.log("70"=== 70); // strict
 
-             //======Underfined======
-let hisAge;
-console.log(typeof hisAge);
-
-
-// OBJECT DATA TYPES
- // There are two object data types
-
- // 1. Arrays
- // 2. Objects 
-
-  //=====Arrays======
-  // Arrays are special types of variables used to store more than one value []
-
-  //Examples
-  let numbers= [7,60,3,90,5,40]; //an array of number
-  console.log(numbers[3]);
-
-  //declear arrays student 
-
-  let studentName= [
-    "Davis", 
-    "Favour", 
-    "Hope", 
-    "Maria", 
-     "Brizo", 
-     "Ambersedor",
-     "Victor",
-     "Xlover",
-     "Edidiong"];
-  console.log(studentName[4]);
+//              //======Underfined======
+// let hisAge;
+// console.log(typeof hisAge);
 
 
- //=====Object======
- // Object are used to store collection of data in key-vaule pairs{}
+// // OBJECT DATA TYPES
+//  // There are two object data types
 
- let person ={
-    name: "Xlover",
-    age: 800,
-    isMarried: false,
-    height: 6.2,
-    eyecolor: "brown",
-    hobbies: ["singing","praying","cooking"]
- };
-//  console.log(person);
- console.log(person.hobbies);
+//  // 1. Arrays
+//  // 2. Objects 
 
+//   //=====Arrays======
+//   // Arrays are special types of variables used to store more than one value []
 
-let favFood =[
-    "afah soup",
-    "bitterleaf soup",
-    "garri",
-    "rice",
-    "yam",
-    "beans"
-];
-console.log(favFood);
+//   //Examples
+//   let numbers= [7,60,3,90,5,40]; //an array of number
+//   console.log(numbers[3]);
 
-let myCar ={
-    name: "Toyota",
-    model: "Corolla",
-    year: 2020,
-};
-console.log(myCar);
+//   //declear arrays student 
 
-let myGirls ={
-    name: "Mary",
-    age: 25,
-    isSingle: true,
-    shapes: ["think","chubby","chocolate"]
-};
-console.log(myGirls);
-
-let myName=[
-    "John",
-    "Jane",
-    "Bob",
-    "Love Jnr",
-];
-console.log(myName [3]);
+//   let studentName= [
+//     "Davis", 
+//     "Favour", 
+//     "Hope", 
+//     "Maria", 
+//      "Brizo", 
+//      "Ambersedor",
+//      "Victor",
+//      "Xlover",
+//      "Edidiong"];
+//   console.log(studentName[4]);
 
 
+//  //=====Object======
+//  // Object are used to store collection of data in key-vaule pairs{}
+
+//  let person ={
+//     name: "Xlover",
+//     age: 800,
+//     isMarried: false,
+//     height: 6.2,
+//     eyecolor: "brown",
+//     hobbies: ["singing","praying","cooking"]
+//  };
+// //  console.log(person);
+//  console.log(person.hobbies);
+
+
+// let favFood =[
+//     "afah soup",
+//     "bitterleaf soup",
+//     "garri",
+//     "rice",
+//     "yam",
+//     "beans"
+// ];
+// console.log(favFood);
+
+// let myCar ={
+//     name: "Toyota",
+//     model: "Corolla",
+//     year: 2020,
+// };
+// console.log(myCar);
+
+// let myGirls ={
+//     name: "Mary",
+//     age: 25,
+//     isSingle: true,
+//     shapes: ["think","chubby","chocolate"]
+// };
+// console.log(myGirls);
+
+// let myName=[
+//     "John",
+//     "Jane",
+//     "Bob",
+//     "Love Jnr",
+// ];
+// console.log(myName [3]);
 
 
 
 
-//Multiplication (*)
-let multNum =4 * 5;
-console.log(multNum );
-console.log(4 * 5); 
-
-const m =13;
-const p =3;
-const mult_num =m * p;
-console.log(mult_num);
-
-//Mudulus operator divides number and return the remainder (%)
-
-let div = 44 / 2;
-console.log(div);
-
-let mod = 44 % 2;
-console.log(mod);
-
-// // increment ++ 
-// let incNum = 20;
-// console.log(incNum);
-// incNum++
-// console.log(incNum);
 
 
-// USing a function
-let inc_num = 20;
-function increment() {
-    console.log(inc_num);
-    inc_num++;
-}
-increment();
-increment();
-increment();
-increment();
-increment();
+// //Multiplication (*)
+// let multNum =4 * 5;
+// console.log(multNum );
+// console.log(4 * 5); 
 
-//decrement --
-let decNum = 20;
-decNum--;
-decNum--;
-decNum--;
-decNum--;
-decNum--;
-console.log(decNum);
+// const m =13;
+// const p =3;
+// const mult_num =m * p;
+// console.log(mult_num);
 
+// //Mudulus operator divides number and return the remainder (%)
 
-// ===== Assignment Operators =====
-// Assignment operators are symbols that assign vaules to variable 
-// =. +=, -=, /=, and %=
+// let div = 44 / 2;
+// console.log(div);
+
+// let mod = 44 % 2;
+// console.log(mod);
+
+// // // increment ++ 
+// // let incNum = 20;
+// // console.log(incNum);
+// // incNum++
+// // console.log(incNum);
 
 
-let a = 5
-a += 3  // this means a = a + 3
-console.log(a);
+// // USing a function
+// let inc_num = 20;
+// function increment() {
+//     console.log(inc_num);
+//     inc_num++;
+// }
+// increment();
+// increment();
+// increment();
+// increment();
+// increment();
 
-let str = "Hello";
-str += " World";
-console.log( str);
+// //decrement --
+// let decNum = 20;
+// decNum--;
+// decNum--;
+// decNum--;
+// decNum--;
+// decNum--;
+// console.log(decNum);
 
-// Subtraction
- let z =10
- z -= 5;
- console.log(z);
 
- // multiplication
-   let w = 7;
-   w *= 14;
-   console.log(w);
+// // ===== Assignment Operators =====
+// // Assignment operators are symbols that assign vaules to variable 
+// // =. +=, -=, /=, and %=
 
-   // division
-   let d = 20;
-   d /= 5;
-   console.log(d)
 
-   // modulus
-   let modu = 17
-   modu %= 4;
-   console.log(modu);
+// let a = 5
+// a += 3  // this means a = a + 3
+// console.log(a);
 
-     // === COMPARISON OPERATOR ===
-     // There are opeterors used to combine multiple boolean expressions 
+// let str = "Hello";
+// str += " World";
+// console.log( str);
+
+// // Subtraction
+//  let z =10
+//  z -= 5;
+//  console.log(z);
+
+//  // multiplication
+//    let w = 7;
+//    w *= 14;
+//    console.log(w);
+
+//    // division
+//    let d = 20;
+//    d /= 5;
+//    console.log(d)
+
+//    // modulus
+//    let modu = 17
+//    modu %= 4;
+//    console.log(modu);
+
+//      // === COMPARISON OPERATOR ===
+//      // There are opeterors used to combine multiple boolean expressions 
      
 
-      //Loose equal to (==)
-     console.log( 5 == 5);
+//       //Loose equal to (==)
+//      console.log( 5 == 5);
 
-     let ageNumber = 18;
-     let ageString = "18";
-console.log( ageNumber == ageString)
+//      let ageNumber = 18;
+//      let ageString = "18";
+// console.log( ageNumber == ageString)
 
-// 2. Strict equal to (===)
-let score = 100;
-let scoreText = "100";
-console.log( score === scoreText);
+// // 2. Strict equal to (===)
+// let score = 100;
+// let scoreText = "100";
+// console.log( score === scoreText);
 
-// != checks if the vaule are not the same (ignores date type)
- console.log( 5 != 2);
+// // != checks if the vaule are not the same (ignores date type)
+//  console.log( 5 != 2);
 
- let price = 500
- let priceText = "500";
- console.log( price !== priceText );
+//  let price = 500
+//  let priceText = "500";
+//  console.log( price !== priceText );
 
- let level = 3
- console.log (level !== 3);
+//  let level = 3
+//  console.log (level !== 3);
 
- // < less than 
- let age1 = 15;
- let requiredAge = 18;
- console.log(age1 < requiredAge);
+//  // < less than 
+//  let age1 = 15;
+//  let requiredAge = 18;
+//  console.log(age1 < requiredAge);
 
- // 6 greater than >
- let balnce = 5000;
- let priceToPay = 3000;
-//  console.log( balance > priceToPay);
+//  // 6 greater than >
+//  let balnce = 5000;
+//  let priceToPay = 3000;
+// //  console.log( balance > priceToPay);
 
- // 7. <= less than or equal to
-     let attempts = 3;
-     let maxAttempts = 3; 
-     console.log(attempts <= maxAttempts);
+//  // 7. <= less than or equal to
+//      let attempts = 3;
+//      let maxAttempts = 3; 
+//      console.log(attempts <= maxAttempts);
 
-     //====Logical Operators =====
-     // logical operators are used to combine multiple boolean expressions. They are used in decision making. 
-      // 1. && (logocal AND) - returns true if both operands are true
-      // 2. || (logical OR) - reture  true if at least one of the operands is true.
-      // 3.! ( logical NOT) - nagates the boolean vaule of an operand
+//      //====Logical Operators =====
+//      // logical operators are used to combine multiple boolean expressions. They are used in decision making. 
+//       // 1. && (logocal AND) - returns true if both operands are true
+//       // 2. || (logical OR) - reture  true if at least one of the operands is true.
+//       // 3.! ( logical NOT) - nagates the boolean vaule of an operand
 
-      // 1. && Logical and
-      let ageP =20;
-      let hasID = true;
-      console.log(ageP >= 18 && hasID ===true);
+//       // 1. && Logical and
+//       let ageP =20;
+//       let hasID = true;
+//       console.log(ageP >= 18 && hasID ===true);
 
-      // .
-      let isLoggedIn = true;
-      let hasPaid = true;
-      if ( isLoggedIn && hasPaid){
-        console.log("You can view premium content");
-      } else {
-        console.log("Please log in and make payment");
-      }
+//       // .
+//       let isLoggedIn = true;
+//       let hasPaid = true;
+//       if ( isLoggedIn && hasPaid){
+//         console.log("You can view premium content");
+//       } else {
+//         console.log("Please log in and make payment");
+//       }
 
-      // logical or ||
-    //   let isAdmin = false;
-    //   let isModerator = false;
-    //   console.log( isAdmin || isModerator); 
+//       // logical or ||
+//     //   let isAdmin = false;
+//     //   let isModerator = false;
+//     //   console.log( isAdmin || isModerator); 
          
-    //   //b. 
-    //   let hasCash = true
-    //   let hasCard = false
-    //   if (hasCash || hasCard) {
-    //     console.log('payment success');
-    //   } else {
-    //     console.log("No payment method available")
-    //   }
+//     //   //b. 
+//     //   let hasCash = true
+//     //   let hasCard = false
+//     //   if (hasCash || hasCard) {
+//     //     console.log('payment success');
+//     //   } else {
+//     //     console.log("No payment method available")
+//     //   }
 
-    //   // logical not ! 
+//     //   // logical not ! 
 
-    //   let isOnline = false;
-    //   console.log(!isOnline);
+//     //   let isOnline = false;
+//     //   console.log(!isOnline);
 
-    //   let hasAccess = true;
-    //   console.log(!hasAccess);
+//     //   let hasAccess = true;
+//     //   console.log(!hasAccess);
 
-    //   let isBanned = true;
-    //   if(!isBanned) {
-    //     console.log("Welcome to the platform");
-    //   } else{
-    //     console.log("Your account is banned!");
-    //   }
+//     //   let isBanned = true;
+//     //   if(!isBanned) {
+//     //     console.log("Welcome to the platform");
+//     //   } else{
+//     //     console.log("Your account is banned!");
+//     //   }
 
-      let loggedIn = true;
-      let isAdmin = false;
-      let isBanned = false;
-      if ( loggedIn && !isBanned && isAdmin){
-        console.log("Welcome Admin");
-      }else {
-        console.log("Access Restricted");
-      }
-
-
-    // ==== String Operators ====
-    // String concatenation is the process of combining two or more strings together using the + operator 
-
-    let name = "Edidiong"
-    let ourAge = 100
-    const bestCourse = "JavaScript"
-    let greeting = " Hi, my name is " + name + ", " + ", " + "I am " + ourAge + "years old and my best course" + bestCourse
-
-    console.log(greeting)
-
-    // if and  else if statement. 
-    // let textScore = 80;
-    // if(textScore >=70){
-    //   console.log(" Grade: A - Execllent work!");
-    // } else if ( testScore >= 50){
-    //   console.log("Grade B: -Good Job");
-    // } else if ( testScore >= 40) {
-    //   console.log(" Grade: C - You passed");
-    // } else {
-    //   console.log("Grade: F - You failed Worefully");
-    // }
-
-    // ====Swtich Statement =====
-    // The switch statement is used to perform different actions based on the different conditions. It is an alternative to using multiple if...else statements when you have conditions to check
+//       let loggedIn = true;
+//       let isAdmin = false;
+//       let isBanned = false;
+//       if ( loggedIn && !isBanned && isAdmin){
+//         console.log("Welcome Admin");
+//       }else {
+//         console.log("Access Restricted");
+//       }
 
 
+//     // ==== String Operators ====
+//     // String concatenation is the process of combining two or more strings together using the + operator 
+
+//     let name = "Edidiong"
+//     let ourAge = 100
+//     const bestCourse = "JavaScript"
+//     let greeting = " Hi, my name is " + name + ", " + ", " + "I am " + ourAge + "years old and my best course" + bestCourse
+
+//     console.log(greeting)
+
+//     // if and  else if statement. 
+//     // let textScore = 80;
+//     // if(textScore >=70){
+//     //   console.log(" Grade: A - Execllent work!");
+//     // } else if ( testScore >= 50){
+//     //   console.log("Grade B: -Good Job");
+//     // } else if ( testScore >= 40) {
+//     //   console.log(" Grade: C - You passed");
+//     // } else {
+//     //   console.log("Grade: F - You failed Worefully");
+//     // }
+
+//     // ====Swtich Statement =====
+//     // The switch statement is used to perform different actions based on the different conditions. It is an alternative to using multiple if...else statements when you have conditions to check
 
 
 
-    let role = "admin"
-    switch(role){
-      case "admin":
-        console.log("You have full access");
-        break;
-        case "student":
-        console.log("welcome student");
-        break;
-        case "tutor":
-          console.log("welcome tutor");
-          break;
-          case "vistor":
-            console.log("you can only read contents");
-            break;
-            defult: 
-            console.log("Unknow role");
-    }
-
-    //======Ternary Operator=====
-    // A shorter version of if... else
-
-      let herAge0 = 17;
-      let message = herAge0 >= 18 ? "adult" : "minor";
-      console.log(message);
 
 
-      let isLoggedInp = false;
-      let logInStatus = isLoggedInp ? "welcome" : "Please log in";
-      console.log(logInStatus);
+//     let role = "admin"
+//     switch(role){
+//       case "admin":
+//         console.log("You have full access");
+//         break;
+//         case "student":
+//         console.log("welcome student");
+//         break;
+//         case "tutor":
+//           console.log("welcome tutor");
+//           break;
+//           case "vistor":
+//             console.log("you can only read contents");
+//             break;
+//             defult: 
+//             console.log("Unknow role");
+//     }
 
-      // ====FUNTIONS====
-      // A Function is a reusable block of code that perform a specific task. it is a fundermental building block in programing that allows us to break down complex problem into smaller, more manageabled pieces. Functions can take inputs (paremeters) and reture outputs (results)
+//     //======Ternary Operator=====
+//     // A shorter version of if... else
 
-      //types
-      // - normal funtion - function name(){}
-      // - arrow function - const name = () => {}
+//       let herAge0 = 17;
+//       let message = herAge0 >= 18 ? "adult" : "minor";
+//       console.log(message);
 
-        function greet(){
-          console.log("Hello, Brilliant");
-        }
-        greet();
+
+//       let isLoggedInp = false;
+//       let logInStatus = isLoggedInp ? "welcome" : "Please log in";
+//       console.log(logInStatus);
+
+//       // ====FUNTIONS====
+//       // A Function is a reusable block of code that perform a specific task. it is a fundermental building block in programing that allows us to break down complex problem into smaller, more manageabled pieces. Functions can take inputs (paremeters) and reture outputs (results)
+
+//       //types
+//       // - normal funtion - function name(){}
+//       // - arrow function - const name = () => {}
+
+//         function greet(){
+//           console.log("Hello, Brilliant");
+//         }
+//         greet();
         
 
-        sayHello()
-        function sayHello(){
-          console.log("Hello, Welcome to Javascript Class");
-        }
+//         sayHello()
+//         function sayHello(){
+//           console.log("Hello, Welcome to Javascript Class");
+//         }
 
-        //  Funtionn Expression
-        // Anytime we get a veriable and set it equal to something, whether it's a function or string or something else, that is known as expression
-        const speak= function(){
-          console.log("Good day!")
-        }
+//         //  Funtionn Expression
+//         // Anytime we get a veriable and set it equal to something, whether it's a function or string or something else, that is known as expression
+//         const speak= function(){
+//           console.log("Good day!")
+//         }
 
-        //== Paremeters and Arguments===
-        //Paremeters = Placeholders
-        // Arguments = Actual Value
+//         //== Paremeters and Arguments===
+//         //Paremeters = Placeholders
+//         // Arguments = Actual Value
 
-        function add(a,b){
-          return a + b
-        }
-        console.log(add(10,10))
-        console.log(add(1,10))
-        console.log(add(10,7))
-        console.log(add(1,11))
+//         function add(a,b){
+//           return a + b
+//         }
+//         console.log(add(10,10))
+//         console.log(add(1,10))
+//         console.log(add(10,7))
+//         console.log(add(1,11))
 
-        // Arrow functions
-        const sayHi = () => console.log ("Hi");
-        sayHi("sayHi")
+//         // Arrow functions
+//         const sayHi = () => console.log ("Hi");
+//         sayHi("sayHi")
 
-        // // //. Arrow funtions with parameter
-        //  const greet = (names) => console.log("Hello" + names);
-        //  greet ("Wizkid")
+//         // // //. Arrow funtions with parameter
+//         //  const greet = (names) => console.log("Hello" + names);
+//         //  greet ("Wizkid")
 
-        //   //3
-        //   const addNum = ( x,y ) => x + y
-        //   console.log(addNum (5, 6));
+//         //   //3
+//         //   const addNum = ( x,y ) => x + y
+//         //   console.log(addNum (5, 6));
 
-        //   //4.
-        //   const getGrade = (score) => {
-        //     if (score >= 70) return "AA";
-        //     else if (score >= 50) return "B";
-        //     else return "F";
-        //   };
-        //   console.log(getGrade(90))
+//         //   //4.
+//         //   const getGrade = (score) => {
+//         //     if (score >= 70) return "AA";
+//         //     else if (score >= 50) return "B";
+//         //     else return "F";
+//         //   };
+//         //   console.log(getGrade(90))
 
-          //===== EVENTS =====
+//           //===== EVENTS =====
 
-          // Events are actions or occurences that happen in the browser, often triggerdby user interactions( like clicks, keypresses, or from submission)
-          // Syntax
-          //element event=' some JavaScipr
+//           // Events are actions or occurences that happen in the browser, often triggerdby user interactions( like clicks, keypresses, or from submission)
+//           // Syntax
+//           //element event=' some JavaScipr
         
-          // common Timing Events:
-          // setTimeout( function, milliseconds) - executes a function once after a specified number of milliseconds
-          // setInterval( function, milliseconds) - Repeatedly execute a function 
+//           // common Timing Events:
+//           // setTimeout( function, milliseconds) - executes a function once after a specified number of milliseconds
+//           // setInterval( function, milliseconds) - Repeatedly execute a function 
+
+//           // ==== Methods===
+//           //1. Create method()
+//           // The create method createa new HTML element specified by tagname 
+
+//           // synthax: 
+//           // document.createElement()
+
+//           // ====forms & User Iput Handling====
+
+//           // Error handleing
+//           // error are mistakes that stop our codes from running. They happen due to wrong input abd other inforesseable things.
+
+//           // error can include:
+//           // reference error - when a variable is not defined
+//           // type Errors
+//           // Range Errors
+//           // Syntax Errors
+//           // URI Errors
+//           // sinlent errors
+
+// let myName = "hope";
+// console.log(myName)
+
+// let isAdult= true;
+// console.log(isAult)
+
+// we handle errors in js using
+// try{} = encloses code that sight potentially cause an error
+// catch {} = catch and gandle any thrown errors from try{}
+// finally {} (optionla) Always executes 
+
+// console.log("You have reached the End")
+// try{
+//   console.lag("Hello");
+// }catch(error){
+//   console.log("this will always run!");
+// }
+// console.log("you have reached the End");
+
+// // user imput
+// const dividend = window.prompt("Enter a dividend")
+// const divisor = window.prompt("Enter a divisor")
+
+// const result = dividend/divisor
+// console.log(result);
+
+// try{
+//   const dividend = Number(wisdow.pompt("Enter a dividend"));
+//   const divisor = Number(window.prompt("Enter a divisor"));
+
+//   if(divisor == 0){
+//     throw new Error ("you can't divide by Zero")
+//   }
+//   if(isNaN(dividend) || isNaN(divisor){
+//     throw new Error ("value must be a number");
+//   }
+//   const result = dividend / divisor;
+//   console.log(result);
+// } catch (error){
+//   console.error(error);
+// }
+// console.log("End of today's class")
+
+// // URL Error
+// try{
+//   decodeURI("XXX")
+// }catch(error){
+//   console.error(error)
+// }
+// let myFrnd = "brizo"
+// console.log(myrnd)
+
+//array methods
+
+const students =["samuel","Elijah", "Eddion" ]
+
+//PUSH
+students.push("Hope","favour")
+console.log(students)
+
+//pop
+students.pop()
+console.log(students)
+
+//unshift() Adds an item to the beginning of an arrray
+students.unshift("Favour")
+
+//shift() Removes the frist item of an arrray
+students.shift("Favour")
+
+//includes() checks whether an array contains a particular value. it returns true or false
+
+//indexof() returens the position(index) of an item in an array
+
+console.log(students.indexOf("xlover"))
+
+//joins() combines array
+
+console.log(students.join("..."))
+
+//slice() copies part of an array without changing the original array. The  ending index is not included.
+
+const newStundents = students.slice(1,3)
+
+console.log
+
+//map()creates a new array by applying a function to eac element of thr original array. It does not change the original array.
+
+const numbers = [10,20,30,40]
+const newNumbers.map(function(number){
+    return number * 2
+})
+
+const newStudents = students.map(student => {
+    return 'my name is ${sudent}'
+})
+
+// filter creates a new  array condition
+const price = [1000,30,40,200,19,868]
+const newPrices = prices. filter(price =>{
+
+})
+
+//Foreach() runs a function for every item
+students.forEach(student => {
+    console.log(`my name is ${student}`)
+})
+
+// sort() isused to arrange items in order like alphabetical order
+students.sort()
+console.log(students)

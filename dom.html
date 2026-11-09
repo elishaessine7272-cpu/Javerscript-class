@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="dom.css" />
+  </head>
+  <body>
+    <!-- <h2>Methods</h2>
+    <button id="addItem">Add Message</button>
+
+    <button id="removeItem">Remove Messsage</button>
+    <div id="box"></div>
+    <script>
+        const addBtn = document,getElementById("addItem")
+        const removeBtn = document.getElementById("removeItem")
+
+        const box = document.getElementById("box")
+
+        let message
+        addBtn.addEventListener("click",() => {
+            message = document.createElement("p");
+
+            message.textContent = "Hello, welcome to our JavaScript class";
+            box.appendChild(message);
+        });
+
+        removeBtn.addEventlistener( "click", () => {
+            if (box.lastElementChild) {
+                box.lastElementChild.remove();
+            }
+
+        }),
+    </script> -->
+    <h1>DOM Manipulation Demo</h1>
+<div class="container">
+  <h2 id="title">DOM Manipulation</h2>
+
+  <button id="loadBtn">Load Profile</button>
+  <button id="themeBtn">Toggle Dark Mode</button>
+
+  <p id="clickCount">Loaded 0 times</p>
+  <p id="clock"></p>
+
+  <div id="card" class="loader hidden">
+    <img id="profileImg" alt="" />
+    <h3 id="name"></h3>
+    <p id="role"></p>
+  </div>
+</div>
+
+<script>
+  const loadBtn = document.getElementById("loadBtn");
+  const themeBtn = document.getElementById("themeBtn");
+  const card = document.getElementById("card");
+  const textName = document.getElementById("name");
+  const roleText = document.getElementById("role");
+  const title = document.getElementById("title");
+  const profileImg = document.getElementById("profileImg");
+  const clickCountEl = document.getElementById("clickCount");
+  const clockEl = document.getElementById("clock");
+
+  let darkMode = false;
+  let loadCount = 0; // NEW: tracks how many times the button was clicked
+
+  loadBtn.addEventListener("click", function () {
+    // NEW EFFECT 1: disable the button so it can't be clicked again mid-load
+    loadBtn.disabled = true;
+    loadBtn.textContent = "Loading...";
+
+    title.textContent = "Loading Profile...";
+    title.style.color = "orange";
+
+    card.classList.remove("hidden");
+    card.classList.add("loader");
+
+    setTimeout(function () {
+      card.classList.remove("loader");
+      card.classList.add("card", "loaded");
+
+      // NEW EFFECT 2: fade-in — add a class, let CSS handle the transition
+      card.classList.add("fade-in");
+
+      textName.textContent = "Eddiong";
+      roleText.textContent = "Web Developer";
+
+      profileImg.src = "https://i.pravatar.cc/150";
+      profileImg.alt = "Profile image";
+
+      title.textContent = "Profile loaded successfully!";
+      title.style.color = "green";
+
+      // NEW EFFECT 3: update the click counter
+      loadCount++;
+      clickCountEl.textContent = "Loaded " + loadCount + " time" + (loadCount === 1 ? "" : "s");
+
+      // re-enable the button now that loading is done
+      loadBtn.disabled = false;
+      loadBtn.textContent = "Load Profile";
+    }, 2000);
+  });
+
+  // NEW EFFECT 4: simple hover feedback on the loaded card
+  card.addEventListener("mouseover", function () {
+    if (card.classList.contains("loaded")) {
+      card.style.borderColor = "orange";
+    }
+  });
+  card.addEventListener("mouseout", function () {
+    if (card.classList.contains("loaded")) {
+      card.style.borderColor = "green";
+    }
+  });
+
+  // theme toggle
+  themeBtn.addEventListener("click", function () {
+    if (darkMode === false) {
+      document.body.classList.add("dark");
+      themeBtn.textContent = "Switch to Light Mode";
+      darkMode = true;
+    } else {
+      document.body.classList.remove("dark");
+      themeBtn.textContent = "Toggle Dark Mode";
+      darkMode = false;
+    }
+  });
+
+  // NEW EFFECT 5: a live clock that updates every second
+  function updateClock() {
+    const now = new Date();
+    clockEl.textContent = now.toLocaleTimeString();
+  }
+  updateClock();              // run once immediately, so it's not blank for the first second
+  setInterval(updateClock, 1000); // then keep running every 1000ms (1 second)
+</script>
+  </body>
+</html>

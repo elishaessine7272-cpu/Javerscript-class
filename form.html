@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Student Registration — Riverbend Learning Programs</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="form.css">
+</head>
+<body>
+
+  <div class="page">
+
+    <main class="form-panel">
+      <div class="sheet">
+
+        <div class="sheet-head">
+          <h2>Student registration</h2>
+          <p> Mita school will email you a confirmation once you're registered.</p>
+        </div>
+
+        <div class="success-banner" id="successBanner" role="status" aria-live="polite" hidden>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 2l8 4v6c0 5-3.5 8.5-8 10-4.5-1.5-8-5-8-10V6l8-4z"/><path d="M9 12l2 2 4-4"/></svg>
+          <div>
+            <strong id="successName">You're registered.</strong>
+            <span>A confirmation has been sent — welcome to the program.</span>
+          </div>
+        </div>
+
+        <form id="registrationForm" novalidate>
+
+          <div class="field-row">
+            <div class="field">
+              <label for="fullName">Full name *</label>
+              <input type="text" id="fullName" name="fullName" autocomplete="name" placeholder="e.g. Amara Chukwu">
+              <small class="field-error" id="fullNameError" aria-live="polite"></small>
+            </div>
+          </div>
+
+          <div class="field-row two">
+            <div class="field">
+              <label for="email">Email *</label>
+              <input type="email" id="email" name="email" autocomplete="email" placeholder="you@example.com">
+              <small class="field-error" id="emailError" aria-live="polite"></small>
+            </div>
+            <div class="field">
+              <label for="phone">Phone number *</label>
+              <input type="tel" id="phone" name="phone" inputmode="numeric" autocomplete="tel" placeholder="Digits only">
+              <small class="field-error" id="phoneError" aria-live="polite"></small>
+            </div>
+          </div>
+
+          <div class="field-row two">
+            <div class="field">
+              <label for="age">Age *</label>
+              <input type="text" id="age" name="age" inputmode="numeric" placeholder="Must be 16 or older">
+              <small class="field-error" id="ageError" aria-live="polite"></small>
+            </div>
+            <div class="field">
+              <label for="gender">Gender *</label>
+              <select id="gender" name="gender">
+                <option value="" disabled selected>Select one</option>
+                <option value="female">Female</option>
+                <option value="male">Male</option>
+                <option value="prefer-not-to-say">Prefer not to say</option>
+              </select>
+              <small class="field-error" id="genderError" aria-live="polite"></small>
+            </div>
+          </div>
+
+          <div class="field-row">
+            <div class="field">
+              <label for="course">Course *</label>
+              <select id="course" name="course">
+                <option value="" disabled selected>Select a course</option>
+                <option value="web-development">Web Development</option>
+                <option value="data-analysis">Data Analysis</option>
+                <option value="graphic-design">Graphic Design</option>
+                <option value="business-administration">Business Administration</option>
+                <option value="culinary-arts">Cybersecurity</option>
+              </select>
+              <small class="field-error" id="courseError" aria-live="polite"></small>
+            </div>
+          </div>
+
+          <div class="field-row two">
+            <div class="field">
+              <label for="password">Password *</label>
+              <input type="password" id="password" name="password" autocomplete="new-password" placeholder="At least 8 characters">
+              <small class="field-error" id="passwordError" aria-live="polite"></small>
+            </div>
+            <div class="field">
+              <label for="confirmPassword">Confirm password *</label>
+              <input type="password" id="confirmPassword" name="confirmPassword" autocomplete="new-password" placeholder="Re-enter your password">
+              <small class="field-error" id="confirmPasswordError" aria-live="polite"></small>
+            </div>
+          </div>
+
+          <button type="submit" class="register-btn">Register</button>
+
+        </form>
+      </div>
+    </main>
+
+  </div>
+
+<script>
+ 
+// ---- select the form and inputs ----
+const form = document.getElementById('registrationForm');
+
+const fullNameInput = document.getElementById('fullName');
+const emailInput = document.getElementById('email');
+const phoneInput = document.getElementById('phone');
+const ageInput = document.getElementById('age');
+const passwordInput = document.getElementById('password');
+const confirmPasswordInput = document.getElementById('confirmPassword');
+const genderInput = document.getElementById('gender');
+const courseInput = document.getElementById('course');
+
+const successBanner = document.getElementById('successBanner');
+const successName = document.getElementById('successName');
+
+// map of field name -> { input, errorEl }, used to show/clear errors
+// and to find each field's wrapping .field container consistently
+const fields = {
+  fullName:        { input: fullNameInput,        error: document.getElementById('fullNameError') },
+  email:            { input: emailInput,            error: document.getElementById('emailError') },
+  phone:            { input: phoneInput,            error: document.getElementById('phoneError') },
+  age:              { input: ageInput,              error: document.getElementById('ageError') },
+  gender:           { input: genderInput,           error: document.getElementById('genderError') },
+  course:           { input: courseInput,           error: document.getElementById('courseError') },
+  password:         { input: passwordInput,         error: document.getElementById('passwordError') },
+  confirmPassword:  { input: confirmPasswordInput,  error: document.getElementById('confirmPasswordError') }
+};
+
+// ---- helpers to show / clear a field's error state ----
+function showError(fieldKey, message){
+  const field = fields[fieldKey];
+  if(!field) return;
+  field.error.textContent = message;
+  field.input.closest('.field').classList.add('has-error');
+  field.input.setAttribute('aria-invalid', 'true');
+}
+
+function clearError(fieldKey){
+  const field = fields[fieldKey];
+  if(!field) return;
+  field.error.textContent = '';
+  field.input.closest('.field').classList.remove('has-error');
+  field.input.removeAttribute('aria-invalid');
+}
+
+function clearAllErrors(){
+  Object.keys(fields).forEach(clearError);
+}
+
+Object.keys(fields).forEach(function(key){
+  const el = fields[key].input;
+  const evt = (el.tagName === 'SELECT') ? 'change' : 'input';
+  el.addEventListener(evt, function(){ clearError(key); });
+});
+
+// ---- individual field validators ----
+// each returns true (valid) or false (invalid), and calls showError itself
+
+function validateFullName(){
+  const value = fullNameInput.value.trim();
+  if(value === ''){
+    showError('fullName', 'Enter your full name.');
+    return false;
+  }
+  if(value.length < 2){
+    showError('fullName', 'That name looks too short.');
+    return false;
+  }
+  return true;
+}
+
+function validateEmail(){
+  const value = emailInput.value.trim();
+  if(value === ''){
+    showError('email', 'Enter your email address.');
+    return false;
+  }
+  const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if(!emailPattern.test(value)){
+    showError('email', 'Enter a valid email, like name@example.com.');
+    return false;
+  }
+  return true;
+}
+
+function validatePhone(){
+  const value = phoneInput.value.trim();
+  if(value === ''){
+    showError('phone', 'Enter your phone number.');
+    return false;
+  }
+  // digits only — no letters, spaces, dashes, or symbols
+  const digitsOnly = /^[0-9]+$/;
+  if(!digitsOnly.test(value)){
+    showError('phone', 'Phone number should contain only numbers.');
+    return false;
+  }
+  if(value.length < 7 || value.length > 15){
+    showError('phone', 'Enter a valid phone number length.');
+    return false;
+  }
+  return true;
+}
+
+function validateAge(){
+  const value = ageInput.value.trim();
+  if(value === ''){
+    showError('age', 'Enter your age.');
+    return false;
+  }
+  if(!/^[0-9]+$/.test(value)){
+    showError('age', 'Age should be a whole number.');
+    return false;
+  }
+  const ageNumber = parseInt(value, 10);
+  if(ageNumber < 16){
+    showError('age', 'You must be at least 16 to register.');
+    return false;
+  }
+  if(ageNumber > 100){
+    showError('age', 'Enter a realistic age.');
+    return false;
+  }
+  return true;
+}
+
+function validateGender(){
+  const value = genderInput.value;
+  if(value === ''){
+    showError('gender', 'Select an option.');
+    return false;
+  }
+  return true;
+}
+
+function validateCourse(){
+  const value = courseInput.value;
+  if(value === ''){
+    showError('course', 'Select a course.');
+    return false;
+  }
+  return true;
+}
+
+function validatePassword(){
+  const value = passwordInput.value;
+  if(value.trim() === ''){
+    showError('password', 'Enter a password.');
+    return false;
+  }
+  if(value.length < 8){
+    showError('password', 'Password must be at least 8 characters long.');
+    return false;
+  }
+  return true;
+}
+
+function validateConfirmPassword(){
+  const value = confirmPasswordInput.value;
+  if(value.trim() === ''){
+    showError('confirmPassword', 'Re-enter your password.');
+    return false;
+  }
+  if(value !== passwordInput.value){
+    showError('confirmPassword', 'Passwords do not match.');
+    return false;
+  }
+  return true;
+}
+
+// ---- run every check, return whether the whole form is valid ----
+function validateForm(){
+  clearAllErrors();
+
+  const results = [
+    validateFullName(),
+    validateEmail(),
+    validatePhone(),
+    validateAge(),
+    validateGender(),
+    validateCourse(),
+    validatePassword(),
+    validateConfirmPassword()
+  ];
+
+  return results.every(function(result){ return result === true; });
+}
+
+// focus the first field that currently has an error
+function focusFirstError(){
+  const firstInvalid = Object.keys(fields).find(function(key){
+    return fields[key].input.closest('.field').classList.contains('has-error');
+  });
+  if(firstInvalid){
+    fields[firstInvalid].input.focus();
+  }
+}
+
+// ---- submit handler ----
+form.addEventListener('submit', function(event){
+  event.preventDefault();
+
+  const isValid = validateForm();
+
+  if(!isValid){
+    focusFirstError();
+    successBanner.hidden = true;
+    return;
+  }
+
+  
+  successName.textContent = 'You\u2019re registered, ' + student.fullName + '.';
+  successBanner.hidden = false;
+  successBanner.scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+  form.reset();
+  clearAllErrors();
+});
+</script>
+</body>
+</html>

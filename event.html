@@ -10,7 +10,7 @@
 </head>
 <body>
     <!-- <h1 class="text-center fw-bold ">HTML EVENTS</h1>
-    <!-- <! Explam 1 ---
+     <! Explam 1 ---
     <button onclick="document.getElementById ('demo').innerHTML=Date ()">
         The time is</button>
         <p id="demo"></p> -->
@@ -53,12 +53,12 @@
 <button onclick="turnOff()">Turn Off</button>
         </div>
         
-    </div>  --> -->
+    </div>  --> 
 
 
     //Timing EvENT=====
 
-    <h2>The setInterval() method</h2>
+    <!-- <h2>The setInterval() method</h2> -->
     <!-- <p id="clock"></p>
 
 
@@ -106,5 +106,39 @@ function turnOff() {
 }
 
     </script>
+
+    <div id="container">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <label for="age">Age:</label>
+        <input type="text" id="age" name="age" required><br><br>
+
+        <label for="course">Course:</label>
+        <input type="text" id="course" name="course" required><br><br>
+
+        <input type="submit" value="save student" id="add-student">
+
+        <button id="all-students">show all students</button>
+
+        <button id="filter-name">filter Student Names</button>
+
+        <br>
+        <br>
+
+        <div class="filter-course">
+
+        <input type="text" placeholder="Enter Course" id="get-course">
+        <button id="filter-course">filter by Course</button>
+
+        </div>
+
+
+        <div id="output">
+
+        </div>
+    </div>
+
+    <script src="main.js"></script>
 </body>
 </html>
